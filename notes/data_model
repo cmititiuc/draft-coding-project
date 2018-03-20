@@ -1,0 +1,33 @@
+rails new draft-coding-project1 -d mysql --api
+
+create sports table
+
+bin/rails g migration CreateSports name:string:index
+
+create positions, average age table
+
+bin/rails g migration CreatePositionAgeAverages position:string:index sport:references average_age:float
+
+create players
+
+bin/rails g migration CreatePlayers type:string name_brief:string first_name:string last_name:string
+
+sports
+======
+name:string
+
+position_age_averages
+=====================
+position:string
+average_age:float
+sport:integer:reference
+
+players
+=======
+type:string
+name_brief:string
+first_name:string
+last_name:string
+position:string
+age:integer
+average_position_age_diff:float:virtual
