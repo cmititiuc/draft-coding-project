@@ -12,22 +12,27 @@ require 'json'
 ['football', 'baseball', 'basketball'].each { |sport|
   puts "\nImporting #{sport} players...\n"
 
-  results = Net::HTTP.get(
-    'api.cbssports.com',
-    "/fantasy/players/list?version=3.0&SPORT=#{sport}&response_format=JSON"
-  )
-  players = JSON.parse(results)['body']['players']
+  path = "/fantasy/players/list?version=3.0&SPORT=#{sport}&response_format=JSON"
+  response = Net::HTTP.get('api.cbssports.com', path)
+  players  = JSON.parse(response)['body']['players']
 
-  players.take(10).each { |player|
+  puts "Persisting #{sport} players...\n"
+
+  limit = 50
+  # players.take(limit).each_with_index { |player, index|
+  players.each_with_index { |player, index|
     Player.create(
       first_name: player['firstname'],
-      last_name: player['lastname'],
-      position: player['position'],
-      age: player['age'],
-      type: "#{sport.titleize}Player"
+      last_name:  player['lastname'],
+      position:   player['position'],
+      age:        player['age'],
+      type:       "#{sport.titleize}Player"
     )
-  }
 
+    printf("\rProgress: #{index + 1}/#{players.count}")
+    # printf("\rProgress: #{index + 1}/#{limit}")
+  }
+  puts
 }
 
 puts "\nDone\n\n"
