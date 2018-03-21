@@ -7,10 +7,8 @@ class Player < ApplicationRecord
 
   def average_age_for_position
     Rails.cache.fetch("#{self.type}/#{self.position}", expires_in: 1.minute) do
-      ages = self.class
-        .where(position: self.position)
-        .map { |player| player.age }
-        .compact
+      ages = self.class.where(position: self.position).map(&:age).compact
+
       ages.inject { |sum, age| sum + age }.to_f / ages.size
     end
   end

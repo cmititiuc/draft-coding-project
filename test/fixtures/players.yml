@@ -1,15 +1,160 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
+# Football players =============================================================
+
+<% player_type = 'FootballPlayer' %>
+
 one:
-  type: 
-  first_name: MyString
-  last_name: MyString
-  position: MyString
-  age: 1
+  type: <%= player_type %>
+  first_name: ''
+  last_name: ''
+  position: Sith Lord
+  age:
 
 two:
-  type: 
-  first_name: MyString
-  last_name: MyString
-  position: MyString
-  age: 1
+  type: <%= player_type %>
+  first_name: Darth
+  last_name: Vader
+  position: Sith Lord
+  age: 45
+
+three:
+  type: <%= player_type %>
+  first_name: Darth
+  last_name: Sidious
+  position: Sith Lord
+  age: 99
+
+four:
+  type: <%= player_type %>
+  first_name: Darth
+  last_name: Plagueis
+  position: Sith Lord
+  age: 123
+
+five:
+  type: <%= player_type %>
+  first_name: Luke
+  last_name: Skywalker
+  position: Jedi
+  age: 23
+
+six:
+  type: <%= player_type %>
+  first_name: Obi-Wan
+  last_name: Kenobi
+  position: Jedi
+  age: 55
+
+seven:
+  type: <%= player_type %>
+  first_name: Leia
+  last_name: Organa
+  position: Princess
+  age: 23
+
+# Basketball players ===========================================================
+
+<% player_type = 'BasketballPlayer' %>
+
+eight:
+  type: <%= player_type %>
+  first_name: ''
+  last_name: ''
+  position: Superhero
+  age:
+
+nine:
+  type: <%= player_type %>
+  first_name: Bruce
+  last_name: Wayne
+  position: Superhero
+  age: 42
+
+ten:
+  type: <%= player_type %>
+  first_name: Clark
+  last_name: Kent
+  position: Superhero
+  age: 38
+
+eleven:
+  type: <%= player_type %>
+  first_name: Diana
+  last_name: Prince
+  position: Superhero
+  age: 32
+
+twelve:
+  type: <%= player_type %>
+  first_name: Selina
+  last_name: Kyle
+  position: Supervillain
+  age: 27
+
+thirteen:
+  type: <%= player_type %>
+  first_name: Lex
+  last_name: Luthor
+  position: Supervillain
+  age: 45
+
+fourteen:
+  type: <%= player_type %>
+  first_name: Louis
+  last_name: Lane
+  position: Reporter
+  age: 30
+
+# Baseball players =============================================================
+
+<% player_type = 'BaseballPlayer' %>
+
+fifteen:
+  type: <%= player_type %>
+  first_name: ''
+  last_name: ''
+  position: MASK
+  age:
+
+sixteen:
+  type: <%= player_type %>
+  first_name: Matt
+  last_name: Trakker
+  position: MASK
+  age: 41
+
+seventeen:
+  type: <%= player_type %>
+  first_name: Bruce
+  last_name: Sato
+  position: MASK
+  age: 35
+
+eighteen:
+  type: <%= player_type %>
+  first_name: Alex
+  last_name: Sector
+  position: MASK
+  age: 27
+
+nineteen:
+  type: <%= player_type %>
+  first_name: Miles
+  last_name: Mayhem
+  position: VENOM
+  age: 45
+
+twenty:
+  type: <%= player_type %>
+  first_name: Sly
+  last_name: Rax
+  position: VENOM
+  age: 38
+
+twentyone:
+  type: <%= player_type %>
+  first_name: Scott
+  last_name: Trakker
+  position: Civilian
+  age: 14
