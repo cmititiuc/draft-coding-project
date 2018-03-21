@@ -1,7 +1,6 @@
 require 'net/http'
 require 'json'
 
-
 ['football', 'baseball', 'basketball'].each { |sport|
   results = Net::HTTP.get(
     'api.cbssports.com',
