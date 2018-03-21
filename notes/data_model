@@ -12,6 +12,14 @@ create players
 
 bin/rails g migration CreatePlayers type:string name_brief:string first_name:string last_name:string
 
+
+
+
+rails g resource Player type:string first_name:string last_name:string position:string age:integer
+rails g scaffold_controller Player --skip-template-engine
+
+
+
 sports
 ======
 name:string
