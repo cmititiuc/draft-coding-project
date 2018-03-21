@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## run tests
 
-Things you may want to cover:
+`rails db:test:prepare`
+`rails test`
 
-* Ruby version
+## seed database
 
-* System dependencies
+`rails db:setup`
 
-* Configuration
+## start rails server
 
-* Database creation
+`rails s`
 
-* Database initialization
+## get a single player
 
-* How to run the test suite
+`http://localhost:3000/players/:id`
 
-* Services (job queues, cache servers, search engines, etc.)
+## get all players by sport
 
-* Deployment instructions
-
-* ...
+`http://localhost:3000/players/football`
+`http://localhost:3000/players/basketball`
+`http://localhost:3000/players/baseball`
