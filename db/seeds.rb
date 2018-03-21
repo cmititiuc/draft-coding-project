@@ -18,8 +18,6 @@ require 'json'
 
   puts "Persisting #{sport} players...\n"
 
-  limit = 50
-  # players.take(limit).each_with_index { |player, index|
   players.each_with_index { |player, index|
     Player.create(
       first_name: player['firstname'],
@@ -30,7 +28,6 @@ require 'json'
     )
 
     printf("\rProgress: #{index + 1}/#{players.count}")
-    # printf("\rProgress: #{index + 1}/#{limit}")
   }
   puts
 }

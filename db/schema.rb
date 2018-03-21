@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20180320233745) do
     t.integer "age"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["type", "position"], name: "index_players_on_type_and_position"
   end
 
 end

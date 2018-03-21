@@ -6,16 +6,19 @@ class PlayersController < ApplicationController
     render json: @player
   end
 
+  # GET /players/football
   def football_index
     @players = FootballPlayer.all
     render json: @players
   end
 
+  # GET /players/basketball
   def basketball_index
     @players = BasketballPlayer.all
     render json: @players
   end
 
+  # GET /players/baseball
   def baseball_index
     @players = BaseballPlayer.all
     render json: @players
