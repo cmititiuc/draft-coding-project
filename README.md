@@ -1,13 +1,13 @@
 # README
 
+## seed database
+
+    rails db:setup
+
 ## run tests
 
     rails db:test:prepare
     rails test
-
-## seed database
-
-    rails db:setup
 
 ## start rails server
 
